@@ -31,7 +31,7 @@ while running:
                 started=False
                 
         if event.type==pygame.KEYDOWN:
-            #color of drawing
+
             if event.key == pygame.K_r:
                 mode = (255,0,0)
             elif event.key == pygame.K_g:
@@ -42,13 +42,13 @@ while running:
                 shape=0
                 mode = (255,255,255)
 
-            #fontchange
+
             elif event.key == pygame.K_UP:
                 font=min(font+3,100)
             elif event.key == pygame.K_DOWN:
                 font=max(1,font-3)
 
-            #shapechanging,0=line,1=circle,2=rectangle
+
             elif event.key == pygame.K_RIGHT:
                 shape+=1
                 if shape>2:
