@@ -5,7 +5,7 @@ from pygame.locals import *
 import sys
 pygame.init()
 
-#colors
+
 col_BLUE  = (0, 0, 255)
 col_R   = (255, 0, 0)
 col_GR = (0, 255, 0)
@@ -17,21 +17,20 @@ COL_PRP = (230, 230, 250)
 display_width = 840
 display_height = 650
 
-# the size and color of background screen
 display = pygame.display.set_mode((840, 650), RESIZABLE)
 display.fill(col_WH)
 
-# setting up the FPS
+
 FPS = 60
 fepes = pygame.time.Clock()
 own_Speed = 5
 
-# loading the images of the cars
+
 car_Enemy = pygame.image.load('redcar.png')
 car_Own = pygame.image.load('greencar.png')
 bg = pygame.image.load("AnimatedStreet.png")
 
-#fonts
+
 font = pygame.font.SysFont("Verdana", 60)
 font_small = pygame.font.SysFont("Verdana", 20)
 game_over = font.render("Game Over", True, col_BLACK)
@@ -143,8 +142,6 @@ while 1:
         current_Coin.nextCoin()
         coins+=1
         time.sleep(0.2)
-
-    # To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(current_Own, sprite_Enemy):
         pygame.mixer.Sound('crash.mp3').play()
         time.sleep(0.7)
